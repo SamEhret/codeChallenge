@@ -36,3 +36,15 @@ class TestInputMatchesString(TestCase):
     @patch('builtins.input', lambda x: 'test_string')
     def test_manual_input_matches_string(self):
         self.assertEqual('test_string', treeFunctions.getInput())
+
+
+class TestIsValid(TestCase):
+    # Test isValid = True
+    def test_isValid_returns_true(self):
+        validString = '(test)'
+        self.assertTrue(treeFunctions.isValid(validString))
+
+    # Test isValie = False
+    def test_isValie_returns_false(self):
+        invalidString = 'test'
+        self.assertFalse(treeFunctions.isValid(invalidString))

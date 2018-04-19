@@ -1,3 +1,4 @@
+import sys
 from treeFunctions import getInput, isValid, processInput, buildTree
 
 inputString = getInput()
