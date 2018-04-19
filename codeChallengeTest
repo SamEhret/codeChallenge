@@ -1,4 +1,5 @@
 import sys
+import re
 
 # Take input or give default input
 inputString = input('Please enter the string to process')
@@ -16,4 +17,3 @@ for char in inputString:
 if leftParen != rightParen:
     print('Invalid input')
     sys.exit()
-
