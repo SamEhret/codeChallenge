@@ -5,7 +5,7 @@ import re
 def getInput():
     inputString = input('Please enter the string to process')
     if not inputString:
-        inputString = '(id,created,employee(id,firstname,employeeType(id),lastname),location)'
+        inputString='(emp(id,name(first,last),job(position(category(title)))))'
     return inputString
 
 # Check that nesting in () is valid

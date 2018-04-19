@@ -3,19 +3,17 @@ import re
 from treeClass import node
 from inputFunctions import processInput
 
-# Creates nodes
+# Creates nodes after making list
 def buildTree(inputString):
     processedString = processInput(inputString)
     root = node('')
     newRoot = root
-    for val in processedString:
-        if newRoot is None:
-            newRoot = root
-        elif val == '(':
+    for item in processedString:
+        if item == '(':
             newRoot = newRoot.children[-1]
-        elif val == ')':
+        elif item == ')':
             newRoot = newRoot.parent
         else:
-            newRoot.children.append(node(val))
+            newRoot.children.append(node(item))
             newRoot.children[-1].parent = newRoot
     return root
