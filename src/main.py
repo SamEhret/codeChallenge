@@ -1,5 +1,6 @@
 import sys
-from treeFunctions import getInput, isValid, processInput, buildTree
+from treeFunctions import buildTree
+from inputFunctions import getInput, isValid, processInput
 
 inputString = getInput()
 if isValid(inputString):
