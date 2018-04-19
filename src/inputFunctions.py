@@ -19,8 +19,7 @@ def isValid(inputString):
 
 # Process inputString to list
 def processInput(inputString):
-    inputString = re.search(r'\((.+)\)', inputString)
-    inputString = inputString[1]
+    inputString = re.search(r'\((.+)\)', inputString)[1]
     inputString = re.split('([(),])', inputString)
     processedString = filter(lambda s: not (s[:]==',' or s[:]==''), inputString)
     return processedString
