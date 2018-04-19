@@ -1,0 +1,8 @@
+{
+  "treeFunctionsTests.py::Test::test_default_input": true,
+  "treeFunctionsTests.py::TestCase": true,
+  "treeFunctionsTests.py::TestClass::()::test": true,
+  "treeFunctionsTests.py::TestInputIsString": true,
+  "treeFunctionsTests.py::TestInputMatchesString": true,
+  "treeFunctionsTests.py::TestInputType::test_input_is_string": true
+}

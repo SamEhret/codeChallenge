@@ -1,0 +1,7 @@
+[
+  "treeFunctionsTests.py::TestInputIsString::test_default_input_is_string",
+  "treeFunctionsTests.py::TestInputIsString::test_input_is_string",
+  "treeFunctionsTests.py::TestInputIsString::test_numeric_input_is_string",
+  "treeFunctionsTests.py::TestInputMatchesString::test_default_matches_default",
+  "treeFunctionsTests.py::TestInputMatchesString::test_manual_input_matches_string"
+]
