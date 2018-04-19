@@ -24,8 +24,11 @@ def processInput(inputString):
     inputString = re.search(r'\((.+)\)', inputString)
     inputString = inputString[1]
     inputString = re.split('([(),])', inputString)
-    processedString = [x for x in inputString if x != ',']
-    return processedString
+    while ',' in inputString or '' in inputString:
+        for val in inputString:
+            if val == ',' or val == '':
+                del inputString[inputString.index(val)]
+    return inputString
 
 # Creates nodes
 def buildTree(inputString):

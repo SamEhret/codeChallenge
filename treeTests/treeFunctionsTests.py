@@ -3,6 +3,7 @@
 
 from unittest import TestCase
 from unittest.mock import patch
+import types
 import sys
 from os import path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
@@ -48,3 +49,25 @@ class TestIsValid(TestCase):
     def test_isValie_returns_false(self):
         invalidString = 'test'
         self.assertFalse(treeFunctions.isValid(invalidString))
+
+
+class TestProcessInput(TestCase):
+    # Test no ',' or '' in processed list
+    def test_comma_and_empty_are_removed(self):
+        testString = '(,apple,dog(t((, test)), k))'
+        self.assertNotIn(',', treeFunctions.processInput(testString))
+        self.assertNotIn('', treeFunctions.processInput(testString))
+    
+
+class TestProcessInputIsList(TestCase):
+    # Test that list is list
+    def test_processed_list_is_list(self):
+        testString = '(test,,dot(call)happy(,bee,))'
+        self.assertTrue(type(treeFunctions.processInput(testString)) is list, msg='Type is: ' + str(type(treeFunctions.processInput(testString))))
+
+
+class TestBuildTreeReturnsObject(TestCase):
+    # Test buildTree returns object
+    def test_object_is_returned_from_buildTree(self):
+        testString = '(test(bees, tree(happy),low,purple)'
+        self.assertTrue(isinstance(treeFunctions.buildTree(testString), object))
