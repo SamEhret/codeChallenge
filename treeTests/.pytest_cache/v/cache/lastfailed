@@ -1,4 +1,5 @@
 {
+  "treeClassTests.py::TestNodeProperties::test_length_of_node": true,
   "treeFunctionsTests.py::Test::test_default_input": true,
   "treeFunctionsTests.py::TestCase": true,
   "treeFunctionsTests.py::TestClass::()::test": true,
