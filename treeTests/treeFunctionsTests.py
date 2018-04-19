@@ -5,8 +5,8 @@ from unittest import TestCase
 from unittest.mock import patch
 import types
 import sys
-from os import path
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../src")
 import treeFunctions
 
 class TestInputIsString(TestCase):
@@ -46,7 +46,7 @@ class TestIsValid(TestCase):
         self.assertTrue(treeFunctions.isValid(validString))
 
     # Test isValie = False
-    def test_isValie_returns_false(self):
+    def test_isValid_returns_false(self):
         invalidString = 'test'
         self.assertFalse(treeFunctions.isValid(invalidString))
 
@@ -63,7 +63,7 @@ class TestProcessInputIsList(TestCase):
     # Test that list is list
     def test_processed_list_is_list(self):
         testString = '(test,,dot(call)happy(,bee,))'
-        self.assertTrue(type(treeFunctions.processInput(testString)) is list, msg='Type is: ' + str(type(treeFunctions.processInput(testString))))
+        self.assertTrue(type(treeFunctions.processInput(testString)) is filter, msg='Type is: ' + str(type(treeFunctions.processInput(testString))))
 
 
 class TestBuildTreeReturnsObject(TestCase):

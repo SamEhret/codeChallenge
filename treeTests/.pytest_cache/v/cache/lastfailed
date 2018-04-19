@@ -1,7 +1,0 @@
-{
-  "treeClassTests.py::TestNodeProperties::test_length_of_node": true,
-  "treeFunctionsTests.py::Test::test_default_input": true,
-  "treeFunctionsTests.py::TestClass::()::test": true,
-  "treeFunctionsTests.py::TestInputType::test_input_is_string": true,
-  "treeFunctionsTests.py::TestIsValidContinuesOrEnds::test_inValid_is_false_system_exit": true
-}

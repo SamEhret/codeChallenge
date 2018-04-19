@@ -11,24 +11,20 @@ def getInput():
 
 # Check that nesting in () is valid
 def isValid(inputString):
-    leftParen = 0
-    rightParen = 0
     if inputString.count('(') != inputString.count(')'):
         return False
     elif inputString[0] != '(' or inputString[-1] != ')':
         return False
-    return True
+    else:
+        return True
 
 # Process inputString to list
 def processInput(inputString):
     inputString = re.search(r'\((.+)\)', inputString)
     inputString = inputString[1]
     inputString = re.split('([(),])', inputString)
-    while ',' in inputString or '' in inputString:
-        for val in inputString:
-            if val == ',' or val == '':
-                del inputString[inputString.index(val)]
-    return inputString
+    processedString = filter(lambda s: not (s[:]==',' or s[:]==''), inputString)
+    return processedString
 
 # Creates nodes
 def buildTree(inputString):
@@ -44,5 +40,5 @@ def buildTree(inputString):
             newRoot = newRoot.parent
         else:
             newRoot.children.append(node(val))
-            newRoot.children[0].parent = newRoot
+            newRoot.children[-1].parent = newRoot
     return root
