@@ -1,6 +1,6 @@
 src/__pycache__/
 src/.pytest_cache
 src/.coverage
-treeTests/__pycache__/
-treeTests/.pytest_cache/
-treeTests/.coverage
+tests/__pycache__/
+tests/.pytest_cache/
+tests/.coverage
