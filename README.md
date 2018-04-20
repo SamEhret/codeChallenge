@@ -1,6 +1,7 @@
 # codeChallenge
->Coding challenge with unittests included.
-Given a string input that uses parenthesis to seperate levels, create a tree where each level is indented with a "-". Results should be printed alphabeticalls by level. Also includes unittests for each code file.
+>Coding challenge with unit tests included.
+
+Given a string input that uses parenthesis to seperate levels, create a tree where each level is indented with a "-". Results should be printed alphabeticalls by level. Also includes unit tests for each code file.
 
 #### Example input:
 ```'(test(dog,carry(talent))table)'```
