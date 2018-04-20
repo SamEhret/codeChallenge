@@ -1,18 +1,18 @@
 # codeChallenge
 >Coding challenge with unit tests included.
 
-Given a string input that uses parenthesis to seperate levels, create a tree where each level is indented with a "-". Results should be printed alphabeticalls by level. Also includes unit tests for each code file.
+Given a string input that uses parenthesis to seperate levels, create a tree where each level is indented with a "-". Results should be printed alphabetically by level. Also includes unit tests for each code file.
 
 #### Example input:
-```'(test(dog,carry(talent))table)'```
+```(test(dog,carry(talent))table)```
 
 #### Example Output:
 ```
 table
 test
-- carry
--- talent
-- dog
+-carry
+--talent
+-dog
 ```
 
 #### Assumptions:
@@ -22,8 +22,20 @@ test
 
 # Getting Started
 #### Prerequisities
-For running unit tests, the project requires the installation of pytest.
+python 3 is required and can be installed [here](https://www.python.org/downloads/)
+
+Pytest is required for running unit tests. Documentation for pytest can be found [here](https://docs.pytest.org/en/latest/contents.html)
 ##### Installing pytest
 `pip install pytest`
 ##### Running pytest
 `py.test testName.py`
+##### Valid test files
+mainTests.py
+inputFunctionsTests.py
+treeFunctionsTests.py
+treeClassTests.py
+
+#### Running the program
+The program will be run from the main.py file. Upon start up, user will be asked to input a valid string, and if no value is passed in, the program will run the default string.
+##### Running codeChallenge
+```python3 main.py```
