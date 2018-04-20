@@ -22,7 +22,7 @@ test
 
 # Getting Started
 #### Prerequisities
-For running unittests, the project requires the installation of pytest. To install:
+For running unit tests, the project requires the installation of pytest.
 ##### Installing pytest
 `pip install pytest`
 ##### Running pytest
