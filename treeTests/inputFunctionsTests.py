@@ -9,6 +9,17 @@ import os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../src")
 import inputFunctions
 
+class TestErrorCheckingWorks(TestCase):
+    # Test parenthesis count checking works
+    def test_equal_amount_of_parenthesis(self):
+        invalidString = '(test()'
+        self.assertFalse(inputFunctions.isValid(invalidString))
+
+    # Test starts and ends with parenthesis
+    def test_equal_amount_of_parenthesis(self):
+        invalidString = '(test'
+        self.assertFalse(inputFunctions.isValid(invalidString))
+
 class TestInputIsString(TestCase):
     # Test manual input is string
     @patch('builtins.input', lambda x: 'test')

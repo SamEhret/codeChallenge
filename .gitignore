@@ -1,3 +1,6 @@
 src/__pycache__/
+src/.coverage
 treeTests/__pycache__/
 treeTests/.pytest_cache/
+treeTests/coverageReport.py
+treeTests/.coverage
