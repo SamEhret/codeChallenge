@@ -4,9 +4,13 @@ class node(object):
         self.parent = None
         self.children = []
 
+    # Returns each node value for sorting
     def getData(node):
         return node.value
 
+    # Recursively creates final string
+    # For each level down in the tree, level counter is increased
+    # Children of the same level are sorted with string sort from getData
     def __str__(self, level=-1):
         printString = '-' * level + str(self.value) + '\n'
         sortedChildren = sorted(self.children, key=node.getData)
