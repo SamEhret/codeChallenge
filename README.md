@@ -21,21 +21,24 @@ test
 3. Valid input starts with "(" and ends with ")"
 
 # Getting Started
-#### Prerequisities
+## Prerequisities
 python 3 is required and can be installed [here](https://www.python.org/downloads/)
 
 Pytest is required for running unit tests. Documentation for pytest can be found [here](https://docs.pytest.org/en/latest/contents.html)
-##### Installing pytest
+#### Installing pytest
 `pip install pytest`
-##### Running pytest
+#### Running pytest
 `py.test testName.py`
-##### Valid test files
+#### Valid test files
 mainTests.py
+
 inputFunctionsTests.py
+
 treeFunctionsTests.py
+
 treeClassTests.py
 
-#### Running the program
+## Running the program
 The program will be run from the main.py file. Upon start up, user will be asked to input a valid string, and if no value is passed in, the program will run the default string.
-##### Running codeChallenge
+#### Running codeChallenge
 ```python3 main.py```
