@@ -3,4 +3,7 @@ src/.pytest_cache
 src/.coverage
 tests/__pycache__/
 tests/.pytest_cache/
-tests/.coverage
+tests/.coverage/
+c#_code_challenge/code_challenge_rewrite/.vs/
+c#_code_challenge/code_challenge_rewrite/bin/
+c#_code_challenge/code_challenge_rewrite/obj/
