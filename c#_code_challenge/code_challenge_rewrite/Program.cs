@@ -4,9 +4,12 @@ namespace code_challenge_rewrite
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var input = new inputClass();
+            input.getInput();
+
+            Console.ReadLine();
         }
     }
 }
