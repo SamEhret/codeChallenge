@@ -7,7 +7,7 @@ namespace code_challenge_rewrite
 {
     public class inputClass
     {
-        public void getInput()
+        public string getInput()
         {
             string inputString;
             Console.WriteLine("Please enter the string to process: ");
@@ -18,44 +18,44 @@ namespace code_challenge_rewrite
                 inputString = "(id,created,employee(id,firstname,employeeType(id),lastname),location)";
             }
 
-            isValid(inputString);
+            return(inputString);
         }
 
-        public void isValid(string inputString)
+        public bool isValid(string inputString)
         {
             if (inputString.Count(a => a == '(') != inputString.Count(b => b == ')'))
             {
-                Console.WriteLine("Invalid Input");
+                return false;
             }
-
             else if (inputString[0] != '(' || inputString[(inputString.Length - 1)] != ')')
             {
-                Console.WriteLine("Invalid Input");
+                return false;
             }
-
             else
             {
-                processInput(inputString);
+                return true;
             }
         }
 
-        public void processInput(string inputString)
+        public List<string> processInput(string inputString)
         {
             Regex search = new Regex(@"\((.+)\)");
             inputString = search.Match(inputString).Groups[1].Value;
 
             string[] splitResults = Regex.Split(inputString, @"([(),])");
 
-            List<string> newList = new List<string>();
+            List<string> inputList = new List<string>();
 
             foreach (var s in splitResults)
             {
                 if (s != "" && s != ",")
                 {
-                    newList.Add(s);
+                    inputList.Add(s);
                 }
             }
             //Next pass the list over to the tree builder and set up the node class
+            //For now, return the list
+            return(inputList);
         }
     }
 }

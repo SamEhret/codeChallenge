@@ -7,7 +7,12 @@ namespace code_challenge_rewrite
         public static void Main(string[] args)
         {
             var input = new inputClass();
-            input.getInput();
+            var inputString = input.getInput();
+
+            if (input.isValid(inputString))
+            {
+                input.processInput(inputString);
+            }
 
             Console.ReadLine();
         }
