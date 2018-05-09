@@ -12,6 +12,11 @@ namespace code_challenge_rewrite
             if (input.isValid(inputString))
             {
                 input.processInput(inputString);
+                Console.WriteLine("**Print Tree Here**");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
             }
 
             Console.ReadLine();
