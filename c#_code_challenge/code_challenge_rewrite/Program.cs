@@ -6,13 +6,16 @@ namespace code_challenge_rewrite
     {
         public static void Main(string[] args)
         {
-            var input = new inputClass();
-            var inputString = input.getInput();
+            var Input = new InputClass();
+            var BuildTree = new BuildTree();
 
-            if (input.isValid(inputString))
+            var inputString = Input.GetInput();
+
+            if (Input.IsValid(inputString))
             {
-                input.processInput(inputString);
-                Console.WriteLine("**Print Tree Here**");
+                var inputList = Input.ProcessInput(inputString);
+                var printString = BuildTree.BuildNodes(inputList);
+                Console.WriteLine(printString.ToString());
             }
             else
             {

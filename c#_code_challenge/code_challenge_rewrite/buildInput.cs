@@ -5,9 +5,9 @@ using System.Text.RegularExpressions;
 
 namespace code_challenge_rewrite
 {
-    public class inputClass
+    public class InputClass
     {
-        public string getInput()
+        public string GetInput()
         {
             string inputString;
             Console.WriteLine("Please enter the string to process: ");
@@ -21,7 +21,7 @@ namespace code_challenge_rewrite
             return(inputString);
         }
 
-        public bool isValid(string inputString)
+        public bool IsValid(string inputString)
         {
             if (inputString.Count(a => a == '(') != inputString.Count(b => b == ')'))
             {
@@ -37,7 +37,7 @@ namespace code_challenge_rewrite
             }
         }
 
-        public List<string> processInput(string inputString)
+        public List<string> ProcessInput(string inputString)
         {
             Regex search = new Regex(@"\((.+)\)");
             inputString = search.Match(inputString).Groups[1].Value;
@@ -53,8 +53,6 @@ namespace code_challenge_rewrite
                     inputList.Add(s);
                 }
             }
-            //Next pass the list over to the tree builder and set up the node class
-            //For now, return the list
             return(inputList);
         }
     }
