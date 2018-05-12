@@ -1,7 +1,6 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "code_challenge_rewrite", "code_challenge_rewrite.csproj", "{56AD8DA0-D529-4E92-B76B-37E9C921F152}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "code_challenge_rewrite", "code_challenge_rewrite.csproj", "{3F75EA51-6235-481F-B7AA-772932A34545}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{56AD8DA0-D529-4E92-B76B-37E9C921F152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56AD8DA0-D529-4E92-B76B-37E9C921F152}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56AD8DA0-D529-4E92-B76B-37E9C921F152}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56AD8DA0-D529-4E92-B76B-37E9C921F152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F75EA51-6235-481F-B7AA-772932A34545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F75EA51-6235-481F-B7AA-772932A34545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F75EA51-6235-481F-B7AA-772932A34545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F75EA51-6235-481F-B7AA-772932A34545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
