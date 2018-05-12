@@ -28,12 +28,7 @@ namespace code_challenge_rewrite
                 return false;
             }
 
-            if (inputString[0] != '(' || inputString[(inputString.Length - 1)] != ')')
-            {
-                return false;
-            }
-            
-            return true;
+            return inputString[0] == '(' && inputString[(inputString.Length - 1)] == ')';
         }
 
         public static IEnumerable<string> ProcessInput(string inputString)
