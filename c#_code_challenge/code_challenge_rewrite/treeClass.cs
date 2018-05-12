@@ -25,7 +25,8 @@ namespace code_challenge_rewrite
             }
             printString += $"{name}\n";
 
-            //need to add lambda sort here for .value
+            children.Sort((a, b) => (a.name.CompareTo(b.name)));
+
             foreach (var child in children)
             {
                 printString += child.ToString(level + 1);
