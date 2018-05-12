@@ -2,18 +2,15 @@
 
 namespace code_challenge_rewrite
 {
-    class Program
+    internal static class Program
     {
         public static void Main(string[] args)
         {
-            var Input = new InputClass();
-            var BuildTree = new BuildTree();
+            var inputString = InputClass.GetInput();
 
-            var inputString = Input.GetInput();
-
-            if (Input.IsValid(inputString))
+            if (InputClass.IsValid(inputString))
             {
-                var inputList = Input.ProcessInput(inputString);
+                var inputList = InputClass.ProcessInput(inputString);
                 var printString = BuildTree.BuildNodes(inputList);
                 Console.WriteLine(printString.ToString());
             }
